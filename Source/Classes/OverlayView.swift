@@ -15,7 +15,7 @@ import UIKit
         didSet {
             (oldValue as? UIView)?.removeFromSuperview()
             
-            guard self.captionView is UIView.Type else {
+            guard self.captionView is UIView else {
                 assertionFailure("`captionView` must be a UIView.")
                 return
             }
@@ -155,7 +155,7 @@ import UIKit
         self.navigationBar.isTranslucent = true
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
         self.navigationBar.items = [self.navigationItem]
         self.addSubview(self.navigationBar)
         

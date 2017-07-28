@@ -77,7 +77,7 @@ import UIKit
     var ignoresInternalTitle: Bool = false
     
     /// The title text attributes inherited by the `title`.
-    public var titleTextAttributes: [String: Any]? {
+    public var titleTextAttributes: [NSAttributedStringKey: Any]? {
         set(value) {
             self.navigationBar.titleTextAttributes = value
         }
@@ -155,7 +155,7 @@ import UIKit
         self.navigationBar.isTranslucent = true
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationBar.items = [self.navigationItem]
         self.addSubview(self.navigationBar)
         
